@@ -1,0 +1,14 @@
+[project]
+name = "cartesian-tree"
+version = "0.1.0"
+description = "Represents a heap-ordered binary tree built from array values and indices."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
