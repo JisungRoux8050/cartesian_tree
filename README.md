@@ -42,3 +42,10 @@ Cartesian trees give you both a heap view (minimum at the root) and a sequence v
 - `build_indexed(pairs)` → `CartesianTree` where `pairs` is a sequence of `(int, float)`
 - `CartesianTree` with: `root`, `len()`, `is_empty()`, `__bool__`, `__iter__` (nodes in order), `values()`, `indices()`, `min_index()`, `__eq__`, `__repr__`
 - `Node` with: `index`, `value`, `left`, `right`, `in_order()`, `__repr__`
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
